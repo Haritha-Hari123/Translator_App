@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translator App</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌐🤖 Translator App🤖🌐</h1>
+    <textarea id="inputText" rows="4" placeholder="Enter text to translate"></textarea>
+    <select id="targetLang">
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="ta">Tamil</option>
+      <option value="ja">Traditional Japanese</option>
+    </select>
+    <button onclick="translateText()">Translate</button>
+
+    <div id="loading" class="loading">
+      <img src="{% static 'js/mario-loading.gif' %}" alt="Loading..." />
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
